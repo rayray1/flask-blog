@@ -1,5 +1,6 @@
 # imports 
-from flask import Flask, render_template, request, session, flash, redirect, url_for, g
+from flask import Flask, render_template, request, session, \
+	flash, redirect, url_for, g
 from functools import wraps
 
 import sqlite3
@@ -70,7 +71,8 @@ def add():
 		return redirect(url_for('main'))
 	else:
 		g.db = connect_db()
-		g.db.execute('insert into posts (title, post) values (?, ?)', [request.form['title'], request.form['post']])
+		g.db.execute('insert into posts (title, post) values (?, ?)', 
+			[request.form['title'], request.form['post']])
 		g.db.commit()
 		g.db.close()
 		flash('New entry was successfully posted!')

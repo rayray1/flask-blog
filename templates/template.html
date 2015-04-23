@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Welcome To My Blog Peeps!</title>
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+	<title>Welcome To My Blog!</title>
+	<link rel="stylesheet"  href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+	<link rel="stylesheet"  href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
+
 <body>
 	<div class="container">
-		{% for message in get_flashed_messages() %}
-			<div class="flash">{{ message }}</div>
-		{% endfor %}
+	{% for message in get_flashed_messages() %}
+		<div class="flash">{{ message }}</div>
+	{% endfor %}
 
-		{% if error %}
-			<p class="error"><strong>Error:</strong> {{ error }}</p>
-		{% endif %}
+	{% if error %}
+	<p class="error"><strong>Error:</strong>{{ error }}</p>
+	{% endif %}
 
-		<!-- inheritance -->
-		{% block content %}
+		<!-- Inheritance -->
+		{% block content%}
 		{% endblock %}
-		<!-- end inheritance -->
+		<!-- End Inheritance -->
 	</div>
-
 </body>
 </html>

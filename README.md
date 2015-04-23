@@ -1,1 +1,1 @@
-Simple Flask-Blog App
+A Simple Python Flask-Blog App with sqlite database

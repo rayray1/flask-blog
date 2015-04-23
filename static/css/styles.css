@@ -1,5 +1,5 @@
 .container {
-	background: #f4f4f4;
+	background: #FFB2FF;
 	margin: 2em auto;
 	padding: 0.8em;
 	width: 40em;
@@ -7,7 +7,23 @@
 }
 
 .flash, .error {
-	background: #FF0101;
-	color: #fff;
+	background: #000;
+	color: red;
 	padding: 0.5em;
+}
+
+h2 {
+	color: black;
+	font-family: cursive;
+	font-weight: 600;
+	font-style: oblique;
+}
+
+h3 {
+	color: black;
+	font-style: italic;
+}
+
+#logout {
+	float: right;
 }
